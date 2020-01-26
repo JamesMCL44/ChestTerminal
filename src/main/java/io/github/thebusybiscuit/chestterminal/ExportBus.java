@@ -23,7 +23,7 @@ public class ExportBus extends SlimefunItem {
 	public ExportBus(Category category, ItemStack item, String id, RecipeType recipeType, ItemStack[] recipe) {
 		super(category, item, id, recipeType, recipe);
 		
-		new BlockMenuPreset(getID(), "&3CT Export Bus") {
+		new BlockMenuPreset(getID(), "&3CT \u8f38\u51fa\u7aef\u53e3") {
 			
 			@Override
 			public void init() {
@@ -39,7 +39,7 @@ public class ExportBus extends SlimefunItem {
 			public int[] getSlotsAccessedByItemTransport(ItemTransportFlow flow) {
 				return new int[0];
 			}
-		};
+		}; /* "&3CT 輸出端口" */
 		
 		registerBlockHandler(getID(), new SlimefunBlockHandler() {
 			
@@ -75,7 +75,7 @@ public class ExportBus extends SlimefunItem {
 		preset.addItem(25, new CustomItem(Material.BLUE_STAINED_GLASS_PANE, " "), click);
 		preset.addItem(26, new CustomItem(Material.BLUE_STAINED_GLASS_PANE, " "), click);
 
-		preset.addItem(2, new CustomItem(Material.PAPER, "&3Items", "", "&bPut in all Items you want to", "&bwhitelist"), click);
+		preset.addItem(2, new CustomItem(Material.PAPER, "&3物品", "", "&b放在這裡加入", "&b白名單"), click);
 	}
 	
 	public int[] getInputSlots() {
